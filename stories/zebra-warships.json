@@ -1,0 +1,97 @@
+{
+  "title": "Why Warships Were Painted Like Zebras",
+  "music": "curious",
+  "cast": {
+    "painter": { "color": "#f2b632", "outfit": "overalls", "hat": "beret", "hatColor": "#2a2d36", "hair": "messy", "hairColor": "#6a3a1a" },
+    "admiral": { "color": "#21357a", "outfit": "uniform", "hat": "captain", "mustache": true, "hairColor": "#d8d8d8", "build": "big" },
+    "subcap": { "color": "#4a5a3a", "outfit": "uniform", "hat": "cap", "hatColor": "#3a4a2a", "hair": "short", "hairColor": "#2a1a10" },
+    "sailor": { "color": "#ffffff", "outfit": "shirt", "hat": "bandana", "hatColor": "#2a6fd6", "tie": "#2a6fd6" },
+    "sailor2": { "color": "#e0533d", "outfit": "tshirt", "hat": "beanie", "hair": "none" }
+  },
+  "shots": [
+    {
+      "say": "They painted a warship like a zebra, on purpose.",
+      "bg": "shipdeck", "time": "day", "framing": "full", "camera": "pushIn",
+      "actors": [
+        { "id": "painter", "x": 0.42, "z": 0.5, "pose": "hammer", "expression": "determined", "holding": "pencil" },
+        { "id": "admiral", "x": 0.78, "z": 0.35, "pose": "crossed", "expression": "suspicious", "facing": "left" }
+      ],
+      "props": [{ "type": "paintcan", "x": 0.22, "z": 0.62, "color": "#1d1d24" }],
+      "beats": [{ "at": "zebra", "actor": "admiral", "expression": "shocked", "zoom": 1.08 }]
+    },
+    {
+      "say": "The admirals were furious.",
+      "bg": "shipdeck", "time": "day", "framing": "close", "camera": "crashZoom", "focus": "admiral",
+      "actors": [{ "id": "admiral", "x": 0.5, "z": 0.45, "pose": "point", "expression": "furious", "facing": "left" }],
+      "fx": ["rage", "shake"], "transition": "cut"
+    },
+    {
+      "say": "You hide a ship! You don't make it the loudest thing on the ocean!",
+      "bg": "shipdeck", "time": "day", "framing": "medium", "camera": "drift", "quote": "admiral", "focus": "admiral",
+      "actors": [
+        { "id": "admiral", "x": 0.4, "z": 0.5, "pose": "talk", "expression": "angry", "facing": "right" },
+        { "id": "painter", "x": 0.72, "z": 0.42, "pose": "stand", "expression": "bored", "facing": "left" }
+      ]
+    },
+    {
+      "say": "But the painter just kept going. Stripes, zigzags, giant swirls.",
+      "bg": "shipdeck", "time": "day", "framing": "full", "camera": "panRight",
+      "actors": [{ "id": "painter", "x": 0.5, "z": 0.5, "pose": "hammer", "expression": "happy", "holding": "pencil" }],
+      "props": [
+        { "type": "paintcan", "x": 0.25, "z": 0.6, "color": "#1d1d24", "enter": "pop" },
+        { "type": "paintcan", "x": 0.78, "z": 0.6, "color": "#ffffff", "enter": "pop" }
+      ],
+      "beats": [{ "at": "swirls", "expression": "crazy", "fx": "sparkle" }]
+    },
+    {
+      "say": "Back then, submarines didn't need to see a ship clearly.",
+      "bg": "sea", "time": "sunset", "framing": "wide", "camera": "pullOut",
+      "props": [{ "type": "ship", "x": 0.5, "z": 0.15, "scale": 0.8, "color": "#5a606a" }],
+      "fx": ["dust"]
+    },
+    {
+      "say": "They needed to guess where it was going.",
+      "bg": "void", "framing": "wide", "camera": "static",
+      "insert": { "type": "map", "title": "TORPEDO MATH", "lines": ["Sub", "Torpedo", "Ship's future"] }
+    },
+    {
+      "say": "A torpedo is slow, so you aim at where the ship will be, not where it is.",
+      "bg": "void", "framing": "wide", "camera": "pushIn",
+      "insert": { "type": "bigtext", "title": "AIM AHEAD", "lines": ["not at the ship"], "color": "#ff5a4a" }
+    },
+    {
+      "say": "Now look through the periscope at a ship covered in zigzags.",
+      "bg": "lab", "time": "night", "tint": "#2a4ad8", "framing": "close", "camera": "pushIn", "focus": "subcap",
+      "actors": [{ "id": "subcap", "x": 0.5, "z": 0.5, "pose": "holdUp", "expression": "suspicious", "holding": "magnifier" }],
+      "fx": ["darken"]
+    },
+    {
+      "say": "Is the front on the left or the right? Is it coming closer, or turning away?",
+      "bg": "lab", "time": "night", "tint": "#2a4ad8", "framing": "medium", "camera": "drift",
+      "actors": [{ "id": "subcap", "x": 0.5, "z": 0.5, "pose": "shrug", "expression": "worried" }],
+      "beats": [{ "at": "right", "fx": "question" }, { "at": "turning", "expression": "crazy", "fx": "stars" }]
+    },
+    {
+      "say": "Nobody can tell. So the torpedo misses by a mile.",
+      "bg": "sea", "time": "day", "framing": "wide", "camera": "panLeft",
+      "props": [{ "type": "ship", "x": 0.3, "z": 0.2, "scale": 0.7, "color": "#5a606a" }, { "type": "rocket", "x": 0.85, "z": 0.45, "rotate": 90, "scale": 0.6 }],
+      "beats": [{ "at": "misses", "fx": "ripples", "sfx": "splash" }]
+    },
+    {
+      "say": "Within a year, thousands of ships looked like floating optical illusions.",
+      "bg": "shipdeck", "time": "sunset", "framing": "full", "camera": "pushIn",
+      "actors": [
+        { "id": "sailor", "x": 0.25, "z": 0.45, "pose": "armsUp", "expression": "laugh" },
+        { "id": "sailor2", "x": 0.5, "z": 0.55, "pose": "wave", "expression": "grin" },
+        { "id": "admiral", "x": 0.78, "z": 0.4, "pose": "hips", "expression": "smug", "facing": "left" }
+      ],
+      "fx": ["confetti"]
+    },
+    {
+      "say": "And the man who started it all? He wasn't a scientist. He was an artist who painted fish.",
+      "bg": "stage", "framing": "medium", "camera": "pushIn", "transition": "iris",
+      "actors": [{ "id": "painter", "x": 0.5, "z": 0.5, "pose": "hold", "expression": "smug", "holding": "fish" }],
+      "beats": [{ "at": "artist", "expression": "wink", "fx": "sparkle" }]
+    }
+  ]
+}

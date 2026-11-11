@@ -1,0 +1,170 @@
+{
+  "title": "Why WW1 Soldiers Feared Rain",
+  "music": "tense",
+  "cast": {
+    "tommy": { "color": "#7a7a45", "outfit": "uniform", "hat": "helmet", "hatColor": "#5a6244", "hair": "short", "hairColor": "#6a3a1a" },
+    "alfie": { "color": "#8a7f4a", "outfit": "uniform", "hat": "helmet", "hatColor": "#6a6f48", "hair": "short", "hairColor": "#2a1a10", "build": "skinny" },
+    "sarge": { "color": "#66663a", "outfit": "uniform", "hat": "cap", "hatColor": "#55552f", "mustache": true, "hairColor": "#d8d8d8", "build": "big" },
+    "farmer": { "color": "#c88a3a", "outfit": "overalls", "hat": "straw", "hatColor": "#e4c872", "beard": true, "hairColor": "#8a8a8a" }
+  },
+  "shots": [
+    {
+      "say": "In 1917, men who survived machine guns are terrified of a rain cloud.",
+      "location": "trench", "framing": "full", "camera": "pushIn", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.5, "pose": "cower", "expression": "scared" }],
+      "props": [{ "type": "cloud", "x": 0.56, "z": 0.4, "y": 430, "scale": 0.35, "color": "#596069", "float": true }],
+      "beats": [
+        { "at": "terrified", "expression": "shocked", "zoom": 1.08 },
+        { "at": "cloud", "sfx": "thunder" }
+      ]
+    },
+    {
+      "say": "Imagine you're Tommy, a British soldier in Belgium.",
+      "location": "trench", "framing": "wide", "camera": "pullOut", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.5, "pose": "stand", "expression": "neutral", "holding": "gun" }]
+    },
+    {
+      "say": "Your trench is freezing, your socks are soaked, and your feet are slowly rotting.",
+      "location": "trench", "framing": "medium", "camera": "drift", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.45, "pose": "shrug", "expression": "sad" }],
+      "beats": [{ "at": "rotting", "expression": "shocked", "fx": "sweat", "zoom": 1.1 }]
+    },
+    {
+      "say": "It's called trench foot, and twenty thousand men catch it in a single winter.",
+      "location": "trench", "framing": "wide", "camera": "static",
+      "insert": { "type": "counter", "title": "MEN WITH TRENCH FOOT", "from": 0, "value": 20000, "color": "#ff5a4a" }
+    },
+    {
+      "say": "So the army gives you a partner, and his official job is rubbing whale oil on your feet. Very romantic.",
+      "location": "trench", "framing": "full", "camera": "pushIn", "focus": "tommy",
+      "actors": [
+        { "id": "tommy", "x": 0.36, "z": 0.5, "pose": "sit", "expression": "bored", "facing": "right" },
+        { "id": "alfie", "x": 0.68, "z": 0.42, "pose": "hold", "expression": "determined", "facing": "left", "holding": "bottle", "holdingLabel": "WHALE OIL" }
+      ],
+      "beats": [
+        { "at": "whale", "expression": "suspicious" },
+        { "at": "romantic", "expression": "love", "fx": "hearts" },
+        { "at": "romantic", "actor": "alfie", "expression": "smug" }
+      ]
+    },
+    {
+      "say": "But today the sky turns grey, and Tommy starts to shake.",
+      "location": "trench", "framing": "close", "camera": "pushIn", "focus": "tommy", "transition": "cut",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.45, "pose": "cower", "expression": "worried" }],
+      "fx": ["rain"],
+      "beats": [{ "at": "shake", "expression": "scared", "fx": "sweat" }]
+    },
+    {
+      "say": "His sergeant laughs. It's only water, lad! Have a wash!",
+      "location": "trench", "framing": "full", "camera": "drift", "focus": "sarge", "quote": "sarge",
+      "actors": [
+        { "id": "sarge", "x": 0.4, "z": 0.5, "pose": "talk", "expression": "laugh", "facing": "right" },
+        { "id": "tommy", "x": 0.72, "z": 0.42, "pose": "cower", "expression": "scared", "facing": "left" }
+      ],
+      "fx": ["rain"]
+    },
+    {
+      "say": "By morning, the path is gone.",
+      "location": "battlefield", "framing": "wide", "camera": "panRight", "focus": "tommy", "transition": "iris",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.5, "pose": "stand", "expression": "shocked" }],
+      "fx": ["rain"], "sfx": ["thunder"]
+    },
+    {
+      "say": "The horses are gone. The whole battlefield has melted.",
+      "location": "battlefield", "framing": "full", "camera": "drift", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.5, "pose": "shrug", "expression": "worried", "holding": "rope" }],
+      "fx": ["rain"],
+      "beats": [{ "at": "melted", "expression": "shocked", "zoom": 1.1 }]
+    },
+    {
+      "say": "Wait, how does rain melt a battlefield?",
+      "location": "battlefield", "framing": "close", "camera": "pushIn", "focus": "sarge", "transition": "cut",
+      "actors": [{ "id": "sarge", "x": 0.5, "z": 0.45, "pose": "think", "expression": "suspicious" }],
+      "fx": ["rain", "question"]
+    },
+    {
+      "say": "You see, this land used to be a swamp.",
+      "location": "plains", "framing": "wide", "camera": "pushIn", "focus": "farmer", "transition": "whip",
+      "actors": [{ "id": "farmer", "x": 0.5, "z": 0.5, "pose": "hips", "expression": "happy" }]
+    },
+    {
+      "say": "For centuries, farmers kept it dry with thousands of tiny drains.",
+      "location": "plains", "framing": "medium", "camera": "drift", "focus": "farmer",
+      "actors": [{ "id": "farmer", "x": 0.42, "z": 0.45, "pose": "hammer", "expression": "determined", "holding": "wrench", "facing": "right" }],
+      "props": [{ "type": "pipe", "x": 0.74, "z": 0.4, "scale": 0.7, "enter": "pop" }],
+      "beats": [{ "at": "drains", "fx": "sparkle" }]
+    },
+    {
+      "say": "Then the army fires over four million shells at it.",
+      "location": "battlefield", "framing": "wide", "camera": "pushIn", "focus": "tommy", "transition": "flash",
+      "actors": [{ "id": "tommy", "x": 0.3, "z": 0.5, "pose": "cower", "expression": "shocked", "facing": "right" }],
+      "props": [{ "type": "field_gun", "x": 0.68, "z": 0.2, "scale": 0.8 }],
+      "beats": [{ "at": "shells", "fx": "flash", "sfx": "boom", "zoom": 1.12 }]
+    },
+    {
+      "say": "Every drain is smashed.",
+      "location": "plains", "framing": "full", "camera": "crashZoom", "focus": "farmer", "transition": "flash",
+      "actors": [{ "id": "farmer", "x": 0.5, "z": 0.5, "pose": "armsUp", "expression": "shocked" }],
+      "fx": ["explosion", "debris"], "sfx": ["crash"], "tint": "#a03020"
+    },
+    {
+      "say": "It's like jamming the plug in your bathtub and leaving the shower on.",
+      "location": "bathroom", "framing": "wide", "camera": "pushIn", "focus": "tommy", "transition": "whip",
+      "actors": [{ "id": "tommy", "x": 0.62, "z": 0.5, "pose": "point", "expression": "worried", "facing": "left" }],
+      "beats": [{ "at": "shower", "expression": "shocked", "sfx": "water" }]
+    },
+    {
+      "say": "The rain has nowhere to go, so the clay turns into soup.",
+      "location": "battlefield", "framing": "medium", "camera": "drift", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.45, "pose": "hold", "expression": "suspicious", "holding": "mug" }],
+      "fx": ["rain"],
+      "beats": [{ "at": "soup", "expression": "bored", "sfx": "splash" }]
+    },
+    {
+      "say": "Now the only road is a line of wooden planks.",
+      "location": "battlefield", "framing": "wide", "camera": "panUp", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.3, "pose": "walk", "expression": "worried", "holding": "gun" }],
+      "fx": ["rain"]
+    },
+    {
+      "say": "One slip, and the mud grabs you, and it does not let go.",
+      "location": "battlefield", "framing": "close", "camera": "pushIn", "focus": "tommy", "transition": "cut",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.45, "pose": "stand", "expression": "worried" }],
+      "fx": ["rain"],
+      "beats": [
+        { "at": "slip", "pose": "fall", "expression": "shocked", "sfx": "splash", "zoom": 1.1 },
+        { "at": "grabs", "expression": "scared", "fx": "shake" }
+      ]
+    },
+    {
+      "say": "Cannons sink. Mules sink. Grown men drown in a field.",
+      "location": "battlefield", "framing": "wide", "camera": "pushIn", "focus": "tommy",
+      "actors": [{ "id": "tommy", "x": 0.42, "z": 0.5, "pose": "stand", "expression": "sad", "facing": "right" }],
+      "props": [
+        { "type": "field_gun", "x": 0.72, "z": 0.2, "y": -110, "rotate": 25, "scale": 0.8 },
+        { "type": "horse", "x": 0.16, "z": 0.25, "scale": 0.75, "rotate": -14 }
+      ],
+      "fx": ["rain"]
+    },
+    {
+      "say": "After a hundred days, the army has moved forward five miles.",
+      "location": "battlefield", "framing": "wide", "camera": "static",
+      "insert": { "type": "bigtext", "title": "100 DAYS", "lines": ["FIVE MILES"], "color": "#ff5a4a" }
+    },
+    {
+      "say": "Five miles. Four million shells.",
+      "location": "battlefield", "framing": "extreme", "camera": "static", "focus": "tommy", "transition": "cut",
+      "actors": [{ "id": "tommy", "x": 0.5, "z": 0.45, "pose": "stand", "expression": "sad" }],
+      "fx": ["rain"]
+    },
+    {
+      "say": "And what beat them in the end was a broken drain.",
+      "location": "battlefield", "framing": "full", "camera": "pullOut", "focus": "tommy",
+      "actors": [
+        { "id": "tommy", "x": 0.62, "z": 0.45, "pose": "stand", "expression": "sad", "facing": "left" }
+      ],
+      "props": [{ "type": "pipe", "x": 0.42, "z": 0.52, "scale": 0.55, "rotate": 72 }],
+      "fx": ["rain"]
+    }
+  ]
+}

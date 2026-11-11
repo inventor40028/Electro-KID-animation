@@ -1,0 +1,54 @@
+{
+  "name": "wheatbelt",
+  "sky": ["#2b7fd0", "#83c2ee", "#f2e3bd"],
+  "terrain": { "colors": ["#c8a951", "#d6b95e", "#b89440"], "height": 16, "flat": 11, "rise": 38, "noise": 0.013, "cell": 5, "seed": 12 },
+  "haze": ["#efdfb2", 80, 430],
+  "sun": { "dir": [-5, 7, 3], "strength": 2.3, "color": "#fff0d0", "range": 38 },
+  "ambient": 1.5,
+  "shade": "#d9c9a4",
+  "camera": { "from": [0.2, 1.5, 11], "to": [0, 1.5, 8.5], "look": [0, 2.6, -20], "fov": 50 },
+  "stage": [0, 0, 1],
+  "parts": [
+    { "box": [2.4, 0.02, 200], "at": [0, 0.02, -60], "color": "#bd945c" },
+    { "box": [0.34, 0.021, 200], "at": [-0.62, 0.021, -60], "color": "#a67c4a" },
+    { "box": [0.34, 0.021, 200], "at": [0.62, 0.021, -60], "color": "#a67c4a" },
+
+    { "use": "wire_fence", "at": [-3.1, 0, 5], "turn": 90, "repeat": { "count": 24, "step": [0, 0, -2.1] } },
+    { "use": "wire_fence", "at": [3.4, 0, 2], "turn": 90, "repeat": { "count": 22, "step": [0, 0, -2.1] } },
+
+    { "box": [0.09, 1.5, 0.09], "at": [-3, 0, 4.6], "color": "#7a5230" },
+    { "sign": [1.5, 0.5], "at": [-3, 1.15, 4.65], "color": "#e8dcc0", "text": "CAMPION", "textColor": "#2a2018" },
+    { "use": "mailbox", "at": [3.2, 0, 3.6], "turn": -8 },
+
+    { "use": "house", "at": [-7.5, 0, -55], "turn": 15, "scale": 1, "color": "#d8c49a" },
+    { "use": "windmill", "at": [6.8, 0, -26], "turn": 15, "scale": 1.05 },
+
+    { "use": "gum_tree", "at": [-5.6, 0, -14], "scale": 1.1 },
+    { "use": "gum_tree", "at": [8.2, 0, -22], "turn": 40, "scale": 1.25 },
+    { "use": "gum_tree", "at": [-12, 0, -34], "turn": 90, "scale": 1.35 },
+    { "use": "gum_tree", "at": [4.2, 0, -52], "turn": 130, "scale": 1.2 },
+    { "use": "gum_tree", "at": [-3.8, 0, -62], "turn": 210, "scale": 1.3 },
+
+    { "use": "rock", "at": [-4.5, 0, 3], "scale": 0.35 },
+    { "use": "rock", "at": [5.2, 0, -8], "scale": 0.28 },
+    { "use": "pebble", "at": [-2.6, 0, 6.5], "scale": 0.8 },
+    { "use": "pebble", "at": [2.7, 0, 5.1], "scale": 0.6 },
+    { "use": "pebble", "at": [4.4, 0, -4.6], "scale": 0.9 },
+
+    { "use": "wheat", "at": [-3.5, 0, 1.6], "scale": 1.1 },
+    { "use": "wheat", "at": [3.9, 0, 0.6], "scale": 1.2 },
+    { "use": "wheat", "at": [-2.8, 0, -2.4], "scale": 1 },
+    { "use": "wheat", "at": [2.8, 0, -3.4], "scale": 1 },
+
+    { "use": "cloud", "at": [-10, 14, -60], "scale": 2.6 },
+    { "use": "cloud", "at": [9, 19, -70], "scale": 3.2 },
+    { "use": "cloud", "at": [-2, 25, -90], "scale": 3.6 }
+  ],
+  "scatter": [
+    { "use": "wheat", "count": 2600, "area": [-24, -70, 24, 0], "keepOut": 1.4, "scale": [0.9, 1.4], "seed": 3 },
+    { "use": "wheat", "count": 900, "area": [-14, 2, 14, 9], "keepOut": 1.6, "scale": [1, 1.5], "seed": 9 },
+    { "use": "shrub_dry", "count": 300, "area": [-18, -50, 18, 0], "keepOut": 1.3, "scale": [0.6, 1.1], "seed": 4 },
+    { "use": "grass", "count": 120, "area": [-16, -40, 16, 2], "keepOut": 1.2, "scale": [0.5, 0.9], "seed": 6 },
+    { "use": "gum_tree", "count": 22, "area": [-120, -200, 120, -60], "keepOut": 12, "scale": [0.9, 1.7], "seed": 8 }
+  ]
+}

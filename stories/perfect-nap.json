@@ -1,0 +1,76 @@
+{
+  "title": "The Man Who Quit To Find The Perfect Nap",
+  "music": "upbeat",
+  "cast": {
+    "dan": { "color": "#2a6fd6", "outfit": "shirt", "tie": "#d8342c", "hair": "messy", "hairColor": "#6a3a1a" },
+    "boss": { "color": "#3a3f4c", "outfit": "suit", "hair": "old", "hairColor": "#c9c9c9", "mustache": true, "build": "big" }
+  },
+  "shots": [
+    {
+      "say": "He quit his job to find the best nap on Earth.",
+      "location": "office", "framing": "full", "camera": "pushIn", "focus": "dan",
+      "actors": [
+        { "id": "dan", "x": 0.38, "z": 0.5, "pose": "armsUp", "expression": "grin" },
+        { "id": "boss", "x": 0.72, "z": 0.42, "pose": "crossed", "expression": "suspicious", "facing": "left" }
+      ],
+      "props": [{ "type": "chair", "x": 0.86, "z": 0.2, "color": "#7b3a35" }],
+      "beats": [{ "at": "nap", "actor": "boss", "expression": "shocked", "zoom": 1.08 }]
+    },
+    {
+      "say": "His boss laughed. You'll be back by Monday!",
+      "location": "office", "framing": "close", "camera": "crashZoom", "focus": "boss", "quote": "boss", "transition": "cut",
+      "actors": [{ "id": "boss", "x": 0.5, "z": 0.45, "pose": "point", "expression": "laugh", "facing": "left" }]
+    },
+    {
+      "say": "His own bed? Too boring.",
+      "location": "bedroom", "framing": "wide", "camera": "pullOut", "focus": "dan",
+      "actors": [{ "id": "dan", "x": 0.55, "z": 0.45, "pose": "think", "expression": "bored", "facing": "left" }],
+      "fx": ["question"]
+    },
+    {
+      "say": "So he grabbed a pillow and started walking.",
+      "location": "street", "framing": "full", "camera": "panRight", "focus": "dan",
+      "actors": [{ "id": "dan", "x": 0.3, "z": 0.5, "moveTo": 0.72, "expression": "determined", "holding": "bag" }]
+    },
+    {
+      "say": "The plains? Way too windy.",
+      "location": "plains", "framing": "wide", "camera": "drift", "focus": "dan",
+      "actors": [{ "id": "dan", "x": 0.5, "z": 0.5, "pose": "cower", "expression": "worried", "facing": "right" }],
+      "props": [{ "type": "sign", "x": 0.82, "z": 0.3, "label": "WIND", "enter": "pop" }],
+      "fx": ["dust"]
+    },
+    {
+      "say": "The forest? Bugs. So many bugs.",
+      "location": "forest", "framing": "medium", "camera": "orbit", "focus": "dan",
+      "actors": [{ "id": "dan", "x": 0.5, "z": 0.45, "pose": "armsUp", "expression": "scared" }],
+      "beats": [{ "at": "bugs", "expression": "shocked", "fx": "exclaim", "zoom": 1.1 }]
+    },
+    {
+      "say": "The desert almost killed him.",
+      "location": "desert", "framing": "full", "camera": "pushIn", "focus": "dan",
+      "actors": [{ "id": "dan", "x": 0.45, "z": 0.5, "pose": "fall", "expression": "dead", "facing": "right" }],
+      "props": [{ "type": "cactus", "x": 0.78, "z": 0.18, "scale": 0.7, "enter": "pop" }],
+      "fx": ["sweat"]
+    },
+    {
+      "say": "Four hundred miles later, he gave up.",
+      "location": "desert", "framing": "extreme", "camera": "static", "focus": "dan", "transition": "cut",
+      "actors": [{ "id": "dan", "x": 0.5, "z": 0.45, "pose": "stand", "expression": "sad" }]
+    },
+    {
+      "say": "He went home, lay down on the rug, and slept eleven hours.",
+      "location": "bedroom", "framing": "full", "camera": "pushIn", "focus": "dan", "transition": "iris",
+      "actors": [{ "id": "dan", "x": 0.5, "z": 0.5, "pose": "lie", "expression": "sleepy" }],
+      "fx": ["zzz"]
+    },
+    {
+      "say": "Today, his old boss pays him twenty bucks a night to use that rug.",
+      "location": "street", "framing": "full", "camera": "drift", "focus": "boss",
+      "actors": [
+        { "id": "boss", "x": 0.4, "z": 0.5, "pose": "hold", "expression": "worried", "holding": "money", "facing": "right" },
+        { "id": "dan", "x": 0.72, "z": 0.42, "pose": "hips", "expression": "smug", "facing": "left" }
+      ],
+      "beats": [{ "at": "rug", "actor": "dan", "expression": "grin", "fx": "sparkle" }]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Python-зависимости (озвучка, звуки, нормализация громкости)
+# Установка: pip install -r requirements.txt
+# Node-часть ставится отдельно: npm install
+edge-tts>=7.3.1
+imageio-ffmpeg>=0.7.0
+numpy>=2.5.4
+scipy>=1.18.1

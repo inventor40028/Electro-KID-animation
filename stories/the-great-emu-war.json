@@ -1,0 +1,274 @@
+{
+  "title": "The Great Emu War",
+  "music": "curious",
+  "cast": {
+    "farmer": { "color": "#b06a2c", "outfit": "overalls", "hat": "cowboy", "hatColor": "#c9b07a", "hair": "short", "hairColor": "#8a7a6a", "mustache": true, "build": "big", "badge": true },
+    "major": { "color": "#6f6f45", "outfit": "uniform", "hat": "cowboy", "hatColor": "#8f8a5a", "hair": "short", "hairColor": "#2a1a10", "mustache": true, "build": "tall" },
+    "gunner": { "color": "#7a7a4a", "outfit": "uniform", "hat": "cap", "hatColor": "#5f5a35", "hair": "short", "hairColor": "#3a2a1a", "build": "skinny" },
+    "reporter": { "color": "#3f5f8a", "outfit": "suit", "hat": "bowler", "hatColor": "#3a3a3a", "glasses": "round", "hair": "short", "hairColor": "#2a1a10", "build": "skinny" },
+    "minister": { "color": "#4a4a5a", "outfit": "suit", "hat": "bowler", "hatColor": "#2f2f35", "mustache": true, "build": "big" }
+  },
+  "shots": [
+    {
+      "say": "Australia sent machine guns to fight twenty thousand emus. The soldiers gave up.",
+      "location": "wheatbelt", "framing": "wide", "camera": "pushIn", "focus": "major",
+      "actors": [
+        { "id": "major", "x": 0.38, "z": 0.55, "pose": "hold", "expression": "determined", "holding": "machinegun" },
+        { "id": "gunner", "x": 0.62, "z": 0.5, "pose": "hold", "expression": "determined", "facing": "left", "holding": "machinegun" }
+      ],
+      "props": [
+        { "type": "emu", "x": 0.18, "z": 0.1, "scale": 0.9, "count": 3, "enter": "left" },
+        { "type": "emu", "x": 0.5, "z": 0.05, "scale": 0.95, "count": 3 },
+        { "type": "emu", "x": 0.8, "z": 0.15, "scale": 0.9, "count": 3, "enter": "right" }
+      ],
+      "fx": ["dust"],
+      "beats": [
+        { "at": "gave up", "actor": "major", "pose": "shrug", "expression": "sad" },
+        { "at": "gave up", "actor": "gunner", "pose": "shrug", "expression": "sad" }
+      ],
+      "transition": "cut"
+    },
+    {
+      "say": "It starts in 1932, in Western Australia's wheatbelt,",
+      "location": "wheatbelt", "framing": "wide", "camera": "panRight", "focus": "farmer",
+      "actors": [{ "id": "farmer", "x": 0.52, "z": 0.45, "pose": "walk", "expression": "neutral" }],
+      "fx": ["dust"]
+    },
+    {
+      "say": "full of veterans given land after the war.",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "farmer",
+      "actors": [{ "id": "farmer", "x": 0.48, "z": 0.5, "pose": "holdUp", "expression": "happy", "holding": "paper", "holdingLabel": "LAND GRANT" }],
+      "beats": [{ "at": "land", "expression": "smug", "fx": "sparkle" }]
+    },
+    {
+      "say": "The wheat is their whole life.",
+      "location": "wheatbelt", "framing": "close", "camera": "pushIn", "focus": "farmer",
+      "actors": [{ "id": "farmer", "x": 0.5, "z": 0.5, "pose": "holdUp", "expression": "happy", "holding": "wheat" }],
+      "beats": [{ "at": "life", "expression": "love", "fx": "hearts" }]
+    },
+    {
+      "say": "Then twenty thousand emus walk out of the desert and eat it.",
+      "location": "wheatbelt", "framing": "wide", "camera": "panRight", "focus": "farmer",
+      "actors": [{ "id": "farmer", "x": 0.36, "z": 0.55, "pose": "armsUp", "expression": "shocked" }],
+      "props": [
+        { "type": "emu", "x": 0.15, "z": 0.1, "scale": 0.95, "count": 3, "enter": "left" },
+        { "type": "emu", "x": 0.8, "z": 0.15, "scale": 0.95, "count": 3, "enter": "right" }
+      ],
+      "fx": ["dust"],
+      "beats": [{ "at": "eat", "actor": "farmer", "pose": "facepalm", "expression": "sad" }],
+      "transition": "cut"
+    },
+    {
+      "say": "The farmers beg for help.",
+      "location": "street", "framing": "full", "camera": "pushIn", "focus": "farmer",
+      "actors": [
+        { "id": "farmer", "x": 0.35, "z": 0.5, "pose": "holdUp", "expression": "sad", "holding": "paper", "holdingLabel": "PETITION" },
+        { "id": "minister", "x": 0.7, "z": 0.45, "pose": "crossed", "expression": "suspicious", "facing": "left" }
+      ],
+      "beats": [{ "at": "help", "actor": "farmer", "expression": "worried" }],
+      "transition": "iris"
+    },
+    {
+      "say": "The government sends two soldiers, two machine guns, and ten thousand rounds.",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "major",
+      "actors": [
+        { "id": "major", "x": 0.38, "z": 0.5, "pose": "hold", "expression": "determined", "holding": "machinegun", "enter": "left" },
+        { "id": "gunner", "x": 0.62, "z": 0.45, "pose": "hold", "expression": "determined", "facing": "left", "holding": "machinegun", "enter": "right" }
+      ],
+      "props": [
+        { "type": "crate", "x": 0.26, "z": 0.3, "scale": 0.75 },
+        { "type": "crate", "x": 0.74, "z": 0.25, "scale": 0.75 }
+      ],
+      "beats": [
+        { "at": "ten thousand", "actor": "major", "expression": "smug", "fx": "sparkle" },
+        { "at": "rounds", "actor": "gunner", "expression": "grin" }
+      ],
+      "transition": "cut"
+    },
+    {
+      "say": "The newspapers laugh. 'Two machine guns for chickens!'",
+      "location": "street", "framing": "full", "camera": "pushIn", "focus": "reporter", "quote": "reporter",
+      "actors": [
+        { "id": "reporter", "x": 0.42, "z": 0.5, "pose": "holdUp", "expression": "laugh", "holding": "paper", "holdingLabel": "EMU WAR" },
+        { "id": "farmer", "x": 0.7, "z": 0.45, "pose": "crossed", "expression": "angry", "facing": "left" }
+      ],
+      "sfx": ["laugh"],
+      "beats": [
+        { "at": "chickens", "actor": "reporter", "expression": "laugh", "fx": "exclaim" },
+        { "at": "chickens", "actor": "farmer", "expression": "furious" }
+      ],
+      "transition": "cut"
+    },
+    {
+      "say": "The army expects this to take a week.",
+      "location": "wheatbelt", "framing": "close", "camera": "pushIn", "focus": "major",
+      "actors": [{ "id": "major", "x": 0.5, "z": 0.45, "pose": "holdUp", "expression": "smug", "holding": "calendar", "holdingLabel": "ONE WEEK" }],
+      "beats": [{ "at": "week", "expression": "wink", "fx": "sparkle" }],
+      "transition": "cut"
+    },
+    {
+      "say": "Wait, how does a bird outgun the army?",
+      "location": "wheatbelt", "framing": "wide", "camera": "crashZoom", "focus": "major",
+      "actors": [
+        { "id": "major", "x": 0.34, "z": 0.5, "pose": "shrug", "expression": "surprised" }
+      ],
+      "props": [{ "type": "emu", "x": 0.62, "z": 0.15, "scale": 1 }],
+      "fx": ["question"],
+      "beats": [{ "at": "bird", "actor": "major", "expression": "shocked", "fx": "exclaim", "zoom": 1.1 }],
+      "transition": "cut"
+    },
+    {
+      "say": "You see, a machine gun is built for a crowd that stands still.",
+      "location": "wheatbelt", "framing": "wide", "camera": "static", "focus": "major",
+      "actors": [
+        { "id": "major", "x": 0.35, "z": 0.5, "pose": "hold", "expression": "determined", "holding": "machinegun" },
+        { "id": "gunner", "x": 0.6, "z": 0.45, "pose": "hold", "expression": "determined", "facing": "left", "holding": "machinegun" }
+      ],
+      "props": [{ "type": "emu", "x": 0.8, "z": 0.2, "scale": 0.95, "count": 3 }],
+      "insert": { "type": "versus", "title": "THE PROBLEM", "lines": ["MACHINE GUN", "EMU"], "color": "#2f6f3a" },
+      "transition": "whip"
+    },
+    {
+      "say": "Emus do not stand still.",
+      "location": "wheatbelt", "framing": "wide", "camera": "panRight", "focus": "prop:0",
+      "props": [
+        { "type": "emu", "x": 0.25, "z": 0.15, "scale": 0.95, "count": 4, "enter": "left" },
+        { "type": "emu", "x": 0.78, "z": 0.1, "scale": 0.95, "count": 4, "enter": "right" }
+      ],
+      "fx": ["speedlines", "dust"], "sfx": ["swoosh"],
+      "transition": "whip"
+    },
+    {
+      "say": "They run at fifty kilometres an hour, split into tiny groups,",
+      "location": "wheatbelt", "framing": "wide", "camera": "static", "focus": "prop:0",
+      "props": [{ "type": "emu", "x": 0.5, "z": 0.2, "scale": 0.95, "count": 4, "float": true }],
+      "fx": ["speedlines"],
+      "insert": { "type": "counter", "title": "EMU TOP SPEED", "value": 50, "suffix": " KM/H", "lines": ["flat out"], "color": "#f2c230" },
+      "transition": "cut"
+    },
+    {
+      "say": "and scatter like popcorn across a hot pan.",
+      "location": "wheatbelt", "framing": "wide", "camera": "drift", "focus": "prop:0",
+      "props": [
+        { "type": "emu", "x": 0.25, "z": 0.15, "scale": 0.9, "count": 2, "y": 30, "float": true },
+        { "type": "emu", "x": 0.5, "z": 0.1, "scale": 0.9, "count": 2, "y": 80, "float": true },
+        { "type": "emu", "x": 0.75, "z": 0.15, "scale": 0.9, "count": 2, "y": 40, "float": true }
+      ],
+      "fx": ["confetti"],
+      "insert": { "type": "bigtext", "title": "POPCORN", "lines": ["across a hot pan"], "color": "#f2c230" },
+      "transition": "cut"
+    },
+    {
+      "say": "Some keep running after they are hit.",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "prop:0",
+      "props": [{ "type": "emu", "x": 0.5, "z": 0.45, "scale": 1.05 }],
+      "fx": ["debris", "dust", "speedlines"], "sfx": ["gunshot"],
+      "beats": [{ "at": "hit", "fx": "shake", "sfx": "impact", "zoom": 1.12 }],
+      "transition": "cut"
+    },
+    {
+      "say": "So the army packs up and leaves.",
+      "location": "wheatbelt", "framing": "wide", "camera": "pullOut", "focus": "farmer",
+      "actors": [
+        { "id": "farmer", "x": 0.35, "z": 0.55, "pose": "facepalm", "expression": "sad" },
+        { "id": "major", "x": 0.65, "z": 0.5, "pose": "walk", "expression": "bored", "exit": "left" },
+        { "id": "gunner", "x": 0.8, "z": 0.45, "pose": "walk", "expression": "sad", "exit": "left" }
+      ],
+      "props": [{ "type": "sign", "x": 0.18, "z": 0.3, "label": "EMU WAR", "color": "#e8dcc0", "rotate": -8, "scale": 0.9 }],
+      "fx": ["dust"],
+      "transition": "cut"
+    },
+    {
+      "say": "The government sends them back,",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "major",
+      "actors": [
+        { "id": "major", "x": 0.4, "z": 0.5, "pose": "walk", "expression": "determined", "holding": "machinegun", "enter": "left" },
+        { "id": "gunner", "x": 0.64, "z": 0.4, "pose": "walk", "expression": "determined", "holding": "machinegun", "enter": "left" }
+      ],
+      "sfx": ["footsteps"],
+      "transition": "cut"
+    },
+    {
+      "say": "and they kill nine hundred and eighty-six emus with nine thousand eight hundred and sixty bullets.",
+      "location": "wheatbelt", "framing": "wide", "camera": "static", "focus": "major",
+      "actors": [
+        { "id": "major", "x": 0.38, "z": 0.5, "pose": "hold", "expression": "determined", "holding": "machinegun" },
+        { "id": "gunner", "x": 0.62, "z": 0.45, "pose": "hold", "expression": "determined", "facing": "left", "holding": "machinegun" }
+      ],
+      "props": [
+        { "type": "emu", "x": 0.2, "z": 0.1, "scale": 0.95, "count": 3, "enter": "left" },
+        { "type": "emu", "x": 0.8, "z": 0.15, "scale": 0.95, "count": 4, "enter": "right" }
+      ],
+      "fx": ["dust"], "sfx": ["gunshot"],
+      "insert": { "type": "counter", "title": "BULLETS FIRED", "value": 9860, "lines": ["986 emus claimed"], "color": "#ff5a4a" },
+      "transition": "flash"
+    },
+    {
+      "say": "Ten bullets for one bird.",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "prop:0",
+      "props": [{ "type": "emu", "x": 0.5, "z": 0.4, "scale": 1 }],
+      "insert": { "type": "bigtext", "title": "10 BULLETS", "lines": ["= 1 EMU"], "color": "#ff5a4a" },
+      "transition": "cut"
+    },
+    {
+      "say": "Then the government tries a bounty, and a fence.",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "farmer",
+      "actors": [{ "id": "farmer", "x": 0.55, "z": 0.5, "pose": "hammer", "expression": "determined", "holding": "hammer" }],
+      "props": [
+        { "type": "wire_fence", "x": 0.72, "z": 0.4, "scale": 1.1 },
+        { "type": "sign", "x": 0.36, "z": 0.3, "label": "BOUNTY", "color": "#f4ecd0", "scale": 0.7 }
+      ],
+      "beats": [
+        { "at": "bounty", "expression": "smug" },
+        { "at": "fence", "fx": "sparkle", "sfx": "impact" }
+      ],
+      "transition": "cut"
+    },
+    {
+      "say": "Farmers do in months what the army cannot do in weeks.",
+      "location": "wheatbelt", "framing": "full", "camera": "drift", "focus": "farmer",
+      "actors": [
+        { "id": "farmer", "x": 0.35, "z": 0.55, "pose": "holdUp", "expression": "smug", "facing": "right", "holding": "paper", "holdingLabel": "BOUNTY PAID" },
+        { "id": "major", "x": 0.72, "z": 0.45, "pose": "crossed", "expression": "sad", "facing": "left" }
+      ],
+      "beats": [
+        { "at": "months", "actor": "farmer", "expression": "wink", "fx": "sparkle" },
+        { "at": "weeks", "actor": "major", "pose": "facepalm", "expression": "sad" }
+      ],
+      "transition": "cut"
+    },
+    {
+      "say": "The army never came back.",
+      "location": "wheatbelt", "framing": "wide", "camera": "pullOut", "focus": "prop:0",
+      "props": [
+        { "type": "emu", "x": 0.3, "z": 0.2, "scale": 1 },
+        { "type": "sign", "x": 0.55, "z": 0.2, "label": "EMU WAR", "color": "#e8dcc0", "rotate": 10, "scale": 0.75 },
+        { "type": "crate", "x": 0.8, "z": 0.25, "scale": 0.8 }
+      ],
+      "fx": ["dust"], "sfx": ["wind"],
+      "transition": "cut"
+    },
+    {
+      "say": "The emu is on Australia's coat of arms.",
+      "location": "wheatbelt", "framing": "wide", "camera": "pushIn", "focus": "prop:0", "tint": "#ffcf8a",
+      "actors": [{ "id": "farmer", "x": 0.82, "z": 0.55, "pose": "stand", "expression": "happy", "facing": "left" }],
+      "props": [
+        { "type": "plinth", "x": 0.5, "z": 0.4, "scale": 1 },
+        { "type": "emu", "x": 0.5, "z": 0.4, "y": 190, "scale": 1.1 }
+      ],
+      "fx": ["sparkle", "godrays"],
+      "beats": [
+        { "at": "coat", "fx": "sparkle" },
+        { "at": "arms", "fx": "godrays" }
+      ],
+      "transition": "cut"
+    },
+    {
+      "say": "It has been there the whole time.",
+      "location": "wheatbelt", "framing": "full", "camera": "pushIn", "focus": "prop:0",
+      "props": [{ "type": "emu", "x": 0.5, "z": 0.45, "scale": 1 }],
+      "insert": { "type": "bigtext", "title": "SINCE 1912", "lines": ["the whole time"], "color": "#f2c230" },
+      "transition": "cut"
+    }
+  ]
+}

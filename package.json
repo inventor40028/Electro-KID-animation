@@ -1,0 +1,34 @@
+{
+  "name": "stickmen-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "make": "tsx scripts/make.ts",
+    "assets": "python scripts/gen_audio_assets.py",
+    "still": "tsx scripts/still.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.4.0",
+    "@remotion/bundler": "4.0.541",
+    "@remotion/cli": "4.0.541",
+    "@remotion/google-fonts": "4.0.541",
+    "@remotion/renderer": "4.0.541",
+    "@remotion/three": "4.0.541",
+    "@remotion/transitions": "4.0.541",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.541",
+    "three": "0.181.2",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.1.8",
+    "@types/three": "0.181.0",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  }
+}

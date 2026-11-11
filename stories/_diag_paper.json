@@ -1,0 +1,23 @@
+{
+  "title": "paper diag",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "rate": "+6%",
+  "music": "none",
+  "cast": {
+    "g": { "color": "#a8552f", "outfit": "hoodie", "hair": "messy", "hairColor": "#3a2a1e", "skin": "#e8b98a" }
+  },
+  "shots": [
+    {
+      "say": "Paper check.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "medium",
+      "camera": "static",
+      "focus": "prop:0",
+      "actors": [],
+      "props": [
+        { "type": "paper", "x": 0.5, "z": 0.45, "y": 120, "scale": 2.2, "color": "#ffffff", "label": "INVOICE $900", "glow": true, "enter": "pop", "float": true }
+      ]
+    }
+  ]
+}

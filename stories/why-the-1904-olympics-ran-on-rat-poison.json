@@ -1,0 +1,291 @@
+{
+  "title": "Why the 1904 Olympics Ran on Rat Poison",
+  "music": "upbeat",
+  "cast": {
+    "hicks": { "color": "#a03434", "outfit": "jersey", "hair": "short", "hairColor": "#2a1a10" },
+    "lorz": { "color": "#3a8a3a", "outfit": "shirt", "hair": "messy", "hairColor": "#6a3a1a" },
+    "carvajal": { "color": "#d8963a", "outfit": "vest", "hat": "straw", "hatColor": "#e4c872", "hair": "short", "hairColor": "#1d1410", "build": "skinny" },
+    "trainer1": { "color": "#8a6a4a", "outfit": "shirt", "hat": "cap", "hatColor": "#5a4a3a", "mustache": true },
+    "trainer2": { "color": "#6a7a5a", "outfit": "shirt", "hair": "old", "hairColor": "#b8b8b8", "beard": true },
+    "official": { "color": "#4a4a6a", "outfit": "suit", "hat": "bowler", "hatColor": "#2a2a34", "mustache": true, "build": "big", "hairColor": "#888888" },
+    "alice": { "color": "#c0598a", "outfit": "dress", "hair": "bob", "hairColor": "#6a3a1a" },
+    "driver": { "color": "#5a7a9a", "outfit": "tshirt", "hat": "cap", "hatColor": "#7a4a2a" },
+    "crowd1": { "color": "#d8b04a", "outfit": "tshirt", "hat": "bowler", "hair": "none" },
+    "crowd2": { "color": "#9a8aa8", "outfit": "shirt", "hat": "cap", "hair": "short", "hairColor": "#2a1a10" },
+    "doctor": { "color": "#9a9ab0", "outfit": "labcoat", "hair": "old", "hairColor": "#d8d8d8", "glasses": "round" }
+  },
+  "shots": [
+    {
+      "say": "The first man across the line of the 1904 Olympic marathon had spent eleven miles of it in a car.",
+      "location": "street",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "lorz",
+      "actors": [
+        { "id": "lorz", "x": 0.45, "z": 0.5, "pose": "walk", "expression": "grin", "moveTo": 0.55 },
+        { "id": "official", "x": 0.74, "z": 0.42, "pose": "crossed", "expression": "suspicious", "facing": "left" }
+      ],
+      "props": [{ "type": "car", "x": 0.14, "z": 0.04, "color": "#7a8a9a" }],
+      "fx": ["dust"],
+      "sfx": ["engine"],
+      "beats": [{ "at": "eleven", "actor": "lorz", "expression": "crazy", "zoom": 1.08 }]
+    },
+    {
+      "say": "The official winner? He ran the last ten miles on rat poison.",
+      "bg": "void",
+      "framing": "wide",
+      "camera": "static",
+      "insert": { "type": "bigtext", "title": "RAT POISON", "lines": ["for the gold medal"], "color": "#ff5a4a" },
+      "transition": "cut"
+    },
+    {
+      "say": "It's St. Louis. It's 90 degrees. Thirty-two runners. One water stop.",
+      "location": "plains",
+      "framing": "wide",
+      "camera": "pullOut",
+      "focus": "hicks",
+      "actors": [
+        { "id": "hicks", "x": 0.55, "z": 0.55, "pose": "run", "expression": "determined" },
+        { "id": "carvajal", "x": 0.42, "z": 0.52, "pose": "run" },
+        { "id": "lorz", "x": 0.7, "z": 0.48, "pose": "run" }
+      ],
+      "props": [{ "type": "sign", "x": 0.76, "z": 0.4, "label": "WATER", "scale": 0.9 }],
+      "tint": "#e0944a",
+      "fx": ["dust"],
+      "transition": "whip"
+    },
+    {
+      "say": "Meanwhile, a Cuban postman shows up — broke, starving — steals two peaches,",
+      "location": "plains",
+      "framing": "full",
+      "camera": "panRight",
+      "focus": "carvajal",
+      "actors": [
+        { "id": "carvajal", "x": 0.35, "z": 0.5, "pose": "walk", "expression": "happy", "holding": "food" },
+        { "id": "crowd1", "x": 0.72, "z": 0.42, "pose": "hold", "expression": "suspicious", "facing": "left", "holding": "food" }
+      ],
+      "props": [{ "type": "bush", "x": 0.85, "z": 0.3, "scale": 1.1 }],
+      "beats": [{ "at": "steals", "actor": "carvajal", "pose": "run", "expression": "crazy", "sfx": "whoosh" }],
+      "transition": "iris"
+    },
+    {
+      "say": "eats rotten apples, and takes a dirt nap.",
+      "location": "plains",
+      "framing": "medium",
+      "camera": "drift",
+      "focus": "carvajal",
+      "actors": [{ "id": "carvajal", "x": 0.45, "z": 0.5, "pose": "cower", "expression": "crazy" }],
+      "props": [{ "type": "bush", "x": 0.82, "z": 0.3, "scale": 1.2 }],
+      "beats": [
+        { "at": "apples", "expression": "worried", "fx": "sweat" },
+        { "at": "nap", "pose": "lie", "expression": "sleepy", "fx": "zzz", "sfx": "boing" }
+      ]
+    },
+    {
+      "say": "Fred Lorz cramps at mile nine. A car pulls up: 'Hop in, champ.'",
+      "location": "plains",
+      "framing": "full",
+      "camera": "drift",
+      "focus": "lorz",
+      "actors": [
+        { "id": "lorz", "x": 0.35, "z": 0.5, "pose": "cower", "expression": "scared" },
+        { "id": "driver", "x": 0.72, "z": 0.48, "pose": "talk", "expression": "grin", "facing": "left" }
+      ],
+      "props": [{ "type": "car", "x": 0.93, "z": 0.22, "color": "#c9a23a" }],
+      "quote": "driver",
+      "sfx": ["horn"],
+      "beats": [{ "at": "champ", "actor": "driver", "expression": "wink" }]
+    },
+    {
+      "say": "The car dies at mile nineteen, so Lorz jogs across the line first.",
+      "location": "street",
+      "framing": "full",
+      "camera": "drift",
+      "focus": "lorz",
+      "actors": [
+        { "id": "lorz", "x": 0.62, "z": 0.5, "pose": "walk", "expression": "grin", "moveTo": 0.52 },
+        { "id": "crowd2", "x": 0.8, "z": 0.4, "pose": "crossed", "expression": "suspicious", "facing": "left" }
+      ],
+      "props": [{ "type": "car", "x": 0.1, "z": 0.06, "color": "#8a8a92", "rotate": -4 }],
+      "sfx": ["engine"],
+      "transition": "whip"
+    },
+    {
+      "say": "The crowd goes wild. The President's daughter crowns him.",
+      "location": "street",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "lorz",
+      "actors": [
+        { "id": "lorz", "x": 0.5, "z": 0.5, "pose": "armsUp", "expression": "laugh" },
+        { "id": "alice", "x": 0.78, "z": 0.44, "pose": "reach", "expression": "happy", "facing": "left" },
+        { "id": "crowd1", "x": 0.26, "z": 0.55, "pose": "armsUp", "expression": "laugh" }
+      ],
+      "props": [
+        { "type": "sign", "x": 0.15, "z": 0.35, "label": "FINISH", "scale": 1 },
+        { "type": "flag", "x": 0.9, "z": 0.3, "color": "#d8342c" },
+        { "type": "flag", "x": 0.06, "z": 0.3, "color": "#2a5ad8" }
+      ],
+      "sfx": ["crowd"],
+      "beats": [{ "at": "crowns", "actor": "alice", "expression": "grin", "zoom": 1.06 }]
+    },
+    {
+      "say": "'You rode eleven miles in a car!'",
+      "location": "street",
+      "framing": "close",
+      "camera": "crashZoom",
+      "focus": "official",
+      "actors": [{ "id": "official", "x": 0.5, "z": 0.45, "pose": "point", "expression": "furious", "facing": "right" }],
+      "quote": "official",
+      "fx": ["rage"],
+      "sfx": ["gasp"],
+      "transition": "cut"
+    },
+    {
+      "say": "'It was a joke!'",
+      "location": "street",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "lorz",
+      "actors": [
+        { "id": "lorz", "x": 0.66, "z": 0.48, "pose": "shrug", "expression": "smug" },
+        { "id": "official", "x": 0.35, "z": 0.44, "pose": "crossed", "expression": "furious", "facing": "right" }
+      ],
+      "quote": "lorz",
+      "beats": [{ "at": "joke", "actor": "lorz", "expression": "crazy" }],
+      "transition": "cut"
+    },
+    {
+      "say": "Wait — so who wins? Thomas Hicks: barely walking, hallucinating.",
+      "location": "street",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "hicks",
+      "actors": [
+        { "id": "hicks", "x": 0.5, "z": 0.5, "pose": "walk", "expression": "crazy" },
+        { "id": "trainer1", "x": 0.74, "z": 0.42, "pose": "push", "facing": "left" },
+        { "id": "trainer2", "x": 0.26, "z": 0.42, "pose": "push", "facing": "right" }
+      ],
+      "fx": ["stars"],
+      "beats": [{ "at": "Wait", "fx": "stars", "zoom": 1.1 }],
+      "transition": "whip"
+    },
+    {
+      "say": "You see, in 1904, medicine's cure for exhaustion was poison.",
+      "location": "street",
+      "framing": "close",
+      "camera": "pushIn",
+      "focus": "trainer2",
+      "actors": [
+        { "id": "trainer2", "x": 0.45, "z": 0.5, "pose": "talk", "expression": "determined" },
+        { "id": "hicks", "x": 0.8, "z": 0.4, "pose": "cower", "expression": "worried", "facing": "left" }
+      ],
+      "quote": "trainer2",
+      "transition": "cut"
+    },
+    {
+      "say": "Hicks' trainers feed him strychnine — rat poison — beaten into egg whites.",
+      "location": "plains",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "trainer1",
+      "actors": [
+        { "id": "trainer1", "x": 0.38, "z": 0.48, "pose": "holdUp", "expression": "determined" },
+        { "id": "hicks", "x": 0.62, "z": 0.45, "pose": "cower", "expression": "suspicious", "facing": "left" }
+      ],
+      "props": [
+        { "type": "rat", "x": 0.24, "z": 0.6, "scale": 1.5, "color": "#7a7a86" },
+        { "type": "flask", "x": 0.5, "z": 0.15, "y": 200, "color": "#f4f0d8" }
+      ],
+      "beats": [
+        { "at": "rat", "sfx": "squeak" },
+        { "at": "poison", "actor": "hicks", "expression": "scared", "zoom": 1.08 }
+      ]
+    },
+    {
+      "say": "A little dose revives you, like coffee.",
+      "location": "plains",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "trainer1",
+      "actors": [
+        { "id": "hicks", "x": 0.55, "z": 0.5, "pose": "hips", "expression": "crazy", "facing": "left" },
+        { "id": "trainer1", "x": 0.3, "z": 0.45, "pose": "holdUp", "expression": "grin", "holding": "mug", "facing": "right" }
+      ],
+      "fx": ["sparkle"],
+      "sfx": ["boing"],
+      "transition": "cut"
+    },
+    {
+      "say": "A big dose stops your heart. His trainers walk that line for ten miles.",
+      "bg": "void",
+      "framing": "wide",
+      "camera": "static",
+      "insert": { "type": "bigtext", "title": "DOSE MATH", "lines": ["a sprinkle = coffee", "a handful = dead"], "color": "#f2c230" }
+    },
+    {
+      "say": "They finish it off with brandy.",
+      "location": "plains",
+      "framing": "close",
+      "camera": "pushIn",
+      "focus": "trainer2",
+      "actors": [
+        { "id": "trainer2", "x": 0.4, "z": 0.5, "pose": "holdUp", "expression": "wink", "holding": "bottle", "holdingLabel": "BRANDY" },
+        { "id": "hicks", "x": 0.68, "z": 0.45, "pose": "cower", "expression": "sad", "facing": "left" }
+      ],
+      "beats": [{ "at": "brandy", "actor": "hicks", "expression": "crazy" }],
+      "transition": "cut"
+    },
+    {
+      "say": "He crosses the last stretch held in the air, feet still shuffling like they're running.",
+      "location": "street",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "hicks",
+      "actors": [
+        { "id": "hicks", "x": 0.5, "z": 0.5, "pose": "run", "expression": "crazy" },
+        { "id": "trainer1", "x": 0.74, "z": 0.44, "pose": "push", "facing": "left" },
+        { "id": "trainer2", "x": 0.26, "z": 0.44, "pose": "push", "facing": "right" }
+      ],
+      "fx": ["stars"],
+      "sfx": ["crowd"],
+      "beats": [{ "at": "running", "actor": "hicks", "expression": "crazy", "zoom": 1.1 }]
+    },
+    {
+      "say": "Then a stretcher. Eight pounds gone. Four doctors. Alive.",
+      "bg": "hospital",
+      "time": "day",
+      "framing": "wide",
+      "camera": "pushIn",
+      "actors": [
+        { "id": "hicks", "x": 0.42, "z": 0.38, "pose": "lie", "expression": "dead" },
+        { "id": "doctor", "x": 0.74, "z": 0.42, "pose": "think", "expression": "worried", "facing": "left" }
+      ],
+      "sfx": ["heartbeat"],
+      "beats": [{ "at": "Alive", "actor": "hicks", "expression": "surprised", "fx": "sparkle", "sfx": "chime", "zoom": 1.08 }],
+      "transition": "cut"
+    },
+    {
+      "say": "His time — three hours, twenty-eight — is still the slowest gold in marathon history.",
+      "bg": "void",
+      "framing": "wide",
+      "camera": "static",
+      "insert": { "type": "bigtext", "title": "3 HRS 28 MIN", "lines": ["slowest gold medal ever"], "color": "#f2c230" }
+    },
+    {
+      "say": "And Lorz? Six months later, he wins the Boston Marathon. Fair and square.",
+      "location": "street",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "lorz",
+      "actors": [
+        { "id": "lorz", "x": 0.5, "z": 0.5, "pose": "armsUp", "expression": "grin", "holding": "trophy" },
+        { "id": "crowd1", "x": 0.3, "z": 0.5, "pose": "armsUp", "expression": "laugh" },
+        { "id": "crowd2", "x": 0.7, "z": 0.45, "pose": "wave", "expression": "grin" }
+      ],
+      "fx": ["confetti"],
+      "sfx": ["success"],
+      "transition": "whip"
+    }
+  ]
+}

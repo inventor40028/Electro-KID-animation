@@ -1,0 +1,204 @@
+{
+  "title": "Goony — November 11",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "rate": "+6%",
+  "music": "warm",
+  "cast": {
+    "goony": {
+      "name": "Goony",
+      "color": "#a8552f",
+      "outfit": "hoodie",
+      "hair": "messy",
+      "hairColor": "#3a2a1e",
+      "hat": "none",
+      "skin": "#e8b98a",
+      "build": "normal"
+    }
+  },
+  "shots": [
+    {
+      "say": "November 11. Goony was having a good time.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "wide",
+      "camera": "orbit",
+      "focus": "goony",
+      "actors": [
+        {
+          "id": "goony",
+          "x": 0.7,
+          "z": 0.55,
+          "pose": "fidget",
+          "expression": "whistle",
+          "facing": "front"
+        }
+      ],
+      "props": []
+    },
+    {
+      "say": "Then he remembered… the invoice.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "close",
+      "camera": "pushIn",
+      "focus": "goony",
+      "transition": "cut",
+      "actors": [
+        {
+          "id": "goony",
+          "x": 0.5,
+          "z": 0.45,
+          "pose": "fidget",
+          "expression": "whistle",
+          "facing": "front"
+        }
+      ],
+      "beats": [
+        {
+          "at": "remembered",
+          "pose": "armsUp",
+          "expression": "shocked",
+          "fx": "exclaim",
+          "zoom": 1.12
+        }
+      ]
+    },
+    {
+      "say": "Sixty seconds later,",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "extreme",
+      "camera": "pushIn",
+      "transition": "cut",
+      "actors": [],
+      "props": [
+        {
+          "type": "laptop",
+          "x": 0.5,
+          "z": 0.9,
+          "scale": 2.4,
+          "label": "TYPE:XQIVO"
+        }
+      ],
+      "sfx": [
+        "type"
+      ],
+      "focus": "prop:0"
+    },
+    {
+      "say": "it was done.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "extreme",
+      "camera": "pushIn",
+      "focus": "prop:0",
+      "transition": "cut",
+      "actors": [],
+      "props": [
+        {
+          "type": "laptop",
+          "x": 0.5,
+          "z": 0.9,
+          "scale": 2.4,
+          "label": "TYPE:XQIVO"
+        }
+      ]
+    },
+    {
+      "say": "Done.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "close",
+      "camera": "crashZoom",
+      "focus": "goony",
+      "transition": "whip",
+      "actors": [
+        {
+          "id": "goony",
+          "x": 0.5,
+          "z": 0.5,
+          "pose": "fidget",
+          "expression": "smug",
+          "facing": "front"
+        }
+      ],
+      "insert": {
+        "type": "document",
+        "title": "INVOICE",
+        "value": 900,
+        "prefix": "$",
+        "lines": [
+          "1. Brand design  $400",
+          "2. Revisions    $200",
+          "3. Rush fee     $300",
+          "Total           $900",
+          "xqivo.com"
+        ]
+      },
+      "fx": [
+        "sparkle",
+        "speedlines"
+      ],
+      "sfx": [
+        "whoosh",
+        "pop"
+      ]
+    },
+    {
+      "say": "Some things shouldn’t take longer than the fun.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "wide",
+      "camera": "panLeft",
+      "focus": "goony",
+      "transition": "dissolve",
+      "actors": [
+        {
+          "id": "goony",
+          "x": 0.72,
+          "z": 0.55,
+          "pose": "fidget",
+          "expression": "whistle",
+          "facing": "front"
+        }
+      ],
+      "props": []
+    },
+    {
+      "say": "If you want to create your business docs like Goony, comment WTF.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "goony",
+      "transition": "dissolve",
+      "actors": [
+        {
+          "id": "goony",
+          "x": 0.5,
+          "z": 0.5,
+          "pose": "fidget",
+          "expression": "whistle",
+          "facing": "front"
+        }
+      ],
+      "props": [
+        {
+          "type": "wtfboard",
+          "x": 0.66,
+          "z": 0.5,
+          "y": 140,
+          "scale": 1.1,
+          "enter": "pop"
+        }
+      ],
+      "fx": [
+        "groinspray"
+      ],
+      "sfx": [
+        "pop",
+        "whoosh"
+      ]
+    }
+  ]
+}

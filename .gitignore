@@ -1,0 +1,12 @@
+node_modules/
+out/
+.cache/
+*.local
+_*.py
+_new_type.txt
+*.png
+!public/**/*.png
+public/music/*.wav
+public/screenrec/
+references/
+public/voice/*.mp3

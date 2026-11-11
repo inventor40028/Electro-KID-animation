@@ -1,0 +1,274 @@
+{
+  "title": "The Heist That Made Mona Lisa Famous",
+  "music": "curious",
+  "cast": {
+    "vincenzo": { "color": "#eceae4", "outfit": "overalls", "hat": "cap", "hatColor": "#3a3a40", "mustache": true, "hair": "short", "hairColor": "#1d1410" },
+    "plumber": { "color": "#2f5a8a", "outfit": "overalls", "hat": "cap", "hatColor": "#223b5c", "mustache": true, "hair": "short", "hairColor": "#4a2a1a" },
+    "guard": { "color": "#1c2b4a", "outfit": "uniform", "hat": "police", "hatColor": "#1c2b4a", "mustache": true, "hair": "none" },
+    "tourist1": { "color": "#b84260", "outfit": "dress", "hair": "bun", "hairColor": "#422818" },
+    "tourist2": { "color": "#385c40", "outfit": "suit", "hat": "tophat", "hatColor": "#202020", "hair": "short", "hairColor": "#604030" },
+    "detective": { "color": "#3a3836", "outfit": "suit", "hat": "bowler", "hatColor": "#22201e", "mustache": true, "hair": "short", "hairColor": "#888888" },
+    "picasso": { "color": "#284a75", "outfit": "shirt", "hair": "messy", "hairColor": "#1d1410", "build": "skinny" },
+    "da_vinci": { "color": "#8c4428", "outfit": "robe", "hat": "beret", "hatColor": "#4a2416", "beard": true, "hair": "old", "hairColor": "#e0e0e0" }
+  },
+  "shots": [
+    {
+      "say": "Before nineteen eleven, almost nobody cared about the Mona Lisa.",
+      "location": "gallery",
+      "framing": "wide",
+      "camera": "pushIn",
+      "focus": "tourist1",
+      "actors": [
+        { "id": "tourist1", "x": 0.38, "z": 0.5, "pose": "stand", "expression": "bored" },
+        { "id": "tourist2", "x": 0.65, "z": 0.48, "pose": "walk", "expression": "bored", "facing": "right", "moveTo": 0.78 }
+      ],
+      "props": [{ "type": "monalisa", "x": 0.5, "z": 0.05, "y": 180 }],
+      "beats": [{ "at": "nobody", "actor": "tourist1", "pose": "shrug" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "It was just a dusty portrait hanging in a quiet corner of the Louvre.",
+      "location": "gallery",
+      "framing": "medium",
+      "camera": "drift",
+      "focus": "guard",
+      "actors": [
+        { "id": "guard", "x": 0.48, "z": 0.5, "pose": "stand", "expression": "sleepy" }
+      ],
+      "props": [{ "type": "monalisa", "x": 0.22, "z": 0.05, "y": 180 }],
+      "fx": ["zzz"],
+      "beats": [{ "at": "quiet", "actor": "guard", "expression": "sleepy" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "Then, on a hot Sunday night, an Italian handyman named Vincenzo hid inside a supply closet.",
+      "location": "office",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.5, "z": 0.5, "pose": "hold", "expression": "smug", "holding": "broom" }
+      ],
+      "props": [
+        { "type": "filing_cabinet", "x": 0.18, "z": 0.1 },
+        { "type": "crate", "x": 0.8, "z": 0.25, "label": "SUPPLIES" }
+      ],
+      "fx": ["dust"],
+      "beats": [{ "at": "closet", "actor": "vincenzo", "expression": "wink", "sfx": "pop" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "He waited until Monday morning when the museum closed, unhooked the masterpiece,",
+      "location": "gallery",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.48, "z": 0.5, "pose": "reach", "expression": "crazy", "holding": "monalisa" }
+      ],
+      "props": [{ "type": "stanchion", "x": 0.85, "z": 0.2 }],
+      "sfx": ["metal"],
+      "beats": [{ "at": "unhooked", "actor": "vincenzo", "expression": "grin" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "and dashed down a stairwell.",
+      "location": "gallery",
+      "framing": "full",
+      "camera": "panRight",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.35, "z": 0.5, "pose": "run", "expression": "crazy", "holding": "monalisa", "moveTo": 0.78 }
+      ],
+      "props": [{ "type": "stanchion", "x": 0.88, "z": 0.2 }],
+      "fx": ["speedlines"],
+      "sfx": ["whoosh"],
+      "transition": "dissolve"
+    },
+    {
+      "say": "He tore off the heavy frame, wrapped the wood panel in his coat, and bolted for the exit.",
+      "location": "office",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.45, "z": 0.5, "pose": "hold", "expression": "determined", "holding": "monalisa" }
+      ],
+      "props": [
+        { "type": "door", "x": 0.82, "z": 0.15 },
+        { "type": "filing_cabinet", "x": 0.16, "z": 0.1 }
+      ],
+      "beats": [{ "at": "bolted", "actor": "vincenzo", "expression": "shocked", "fx": "sweat" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "One tiny problem: the door handle was missing. He was trapped.",
+      "location": "office",
+      "framing": "close",
+      "camera": "crashZoom",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.45, "z": 0.5, "pose": "cower", "expression": "shocked", "holding": "monalisa" }
+      ],
+      "props": [{ "type": "door", "x": 0.82, "z": 0.15 }],
+      "fx": ["cracks"],
+      "sfx": ["alarm", "impact"],
+      "beats": [{ "at": "trapped", "actor": "vincenzo", "expression": "scared", "fx": "sweat" }],
+      "transition": "flash"
+    },
+    {
+      "say": "Suddenly, a museum plumber walked down the hall: 'Need a hand, mate?'",
+      "location": "office",
+      "framing": "full",
+      "camera": "drift",
+      "focus": "plumber",
+      "actors": [
+        { "id": "vincenzo", "x": 0.34, "z": 0.5, "pose": "cower", "expression": "worried", "holding": "monalisa" },
+        { "id": "plumber", "x": 0.68, "z": 0.48, "pose": "talk", "expression": "grin", "holding": "wrench", "facing": "left" }
+      ],
+      "props": [{ "type": "door", "x": 0.86, "z": 0.15 }],
+      "quote": "plumber",
+      "beats": [{ "at": "hand", "actor": "plumber", "expression": "wink", "sfx": "click" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "The plumber unlocked the door, waved goodbye,",
+      "location": "office",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "plumber",
+      "actors": [
+        { "id": "plumber", "x": 0.5, "z": 0.5, "pose": "wave", "expression": "happy", "holding": "key" }
+      ],
+      "props": [{ "type": "door", "x": 0.78, "z": 0.15 }],
+      "sfx": ["door"],
+      "transition": "dissolve"
+    },
+    {
+      "say": "and Vincenzo strolled into Paris with humanity's greatest artwork.",
+      "location": "street",
+      "framing": "wide",
+      "camera": "panRight",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.48, "z": 0.5, "pose": "walk", "expression": "smug", "holding": "monalisa", "moveTo": 0.85 }
+      ],
+      "sfx": ["footsteps"],
+      "beats": [{ "at": "strolled", "actor": "vincenzo", "expression": "grin" }],
+      "transition": "iris"
+    },
+    {
+      "say": "For twenty-four hours, not a single guard noticed.",
+      "location": "gallery",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "guard",
+      "actors": [
+        { "id": "guard", "x": 0.5, "z": 0.5, "pose": "shrug", "expression": "bored" }
+      ],
+      "beats": [{ "at": "noticed", "actor": "guard", "expression": "smug", "fx": "question" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "They assumed the museum photographer took it for a postcard.",
+      "bg": "void",
+      "framing": "wide",
+      "camera": "static",
+      "insert": { "type": "bigtext", "title": "WHERE IS IT?", "lines": ["Guards assumed it was out for photos"], "color": "#f2c230" },
+      "transition": "cut"
+    },
+    {
+      "say": "When the news broke, a hundred thousand people lined up outside the Louvre.",
+      "location": "street",
+      "framing": "wide",
+      "camera": "pullOut",
+      "focus": "tourist1",
+      "actors": [
+        { "id": "tourist1", "x": 0.32, "z": 0.5, "pose": "walk", "expression": "shocked" },
+        { "id": "tourist2", "x": 0.52, "z": 0.5, "pose": "reach", "expression": "surprised" },
+        { "id": "guard", "x": 0.74, "z": 0.48, "pose": "hips", "expression": "furious", "facing": "left" }
+      ],
+      "sfx": ["crowd"],
+      "beats": [{ "at": "hundred", "actor": "tourist2", "expression": "shocked", "fx": "exclaim" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "Not to see art, but to stare at four blank hooks on an empty wall.",
+      "location": "gallery",
+      "framing": "full",
+      "camera": "drift",
+      "focus": "tourist1",
+      "actors": [
+        { "id": "tourist1", "x": 0.36, "z": 0.5, "pose": "point", "expression": "shocked" },
+        { "id": "tourist2", "x": 0.65, "z": 0.48, "pose": "think", "expression": "suspicious", "facing": "left" }
+      ],
+      "beats": [{ "at": "blank", "actor": "tourist1", "expression": "crazy", "fx": "sweat" }],
+      "transition": "whip"
+    },
+    {
+      "say": "Detectives panicked and interrogated Pablo Picasso.",
+      "location": "office",
+      "framing": "full",
+      "camera": "pushIn",
+      "focus": "picasso",
+      "actors": [
+        { "id": "detective", "x": 0.32, "z": 0.5, "pose": "point", "expression": "furious" },
+        { "id": "picasso", "x": 0.68, "z": 0.48, "pose": "cower", "expression": "shocked", "facing": "left" }
+      ],
+      "beats": [{ "at": "Picasso", "actor": "picasso", "expression": "scared", "fx": "sweat", "sfx": "gasp" }],
+      "transition": "iris"
+    },
+    {
+      "say": "Meanwhile, the painting was sitting inside a wooden trunk, directly under Vincenzo's mattress.",
+      "location": "bedroom",
+      "framing": "full",
+      "camera": "drift",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "vincenzo", "x": 0.55, "z": 0.5, "pose": "sit", "expression": "smug" }
+      ],
+      "props": [
+        { "type": "trunk", "x": 0.22, "z": 0.2 }
+      ],
+      "beats": [{ "at": "mattress", "actor": "vincenzo", "expression": "grin", "fx": "sparkle" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "For two full years.",
+      "bg": "void",
+      "framing": "wide",
+      "camera": "static",
+      "insert": { "type": "counter", "title": "TIME UNDER BED", "value": 24, "from": 1, "suffix": " MONTHS", "color": "#e05a47" },
+      "transition": "cut"
+    },
+    {
+      "say": "You see, fame isn't always about genius.",
+      "location": "gallery",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "da_vinci",
+      "actors": [
+        { "id": "da_vinci", "x": 0.5, "z": 0.5, "pose": "think", "expression": "smug" }
+      ],
+      "props": [{ "type": "monalisa", "x": 0.22, "z": 0.05, "y": 180 }],
+      "beats": [{ "at": "genius", "actor": "da_vinci", "expression": "wink", "fx": "sparkle" }],
+      "transition": "dissolve"
+    },
+    {
+      "say": "Leonardo painted the smile, but a thief in a broom closet made it immortal.",
+      "location": "gallery",
+      "framing": "full",
+      "camera": "pullOut",
+      "focus": "vincenzo",
+      "actors": [
+        { "id": "da_vinci", "x": 0.35, "z": 0.5, "pose": "shrug", "expression": "surprised" },
+        { "id": "vincenzo", "x": 0.68, "z": 0.48, "pose": "armsUp", "expression": "laugh", "facing": "left", "holding": "broom" }
+      ],
+      "props": [{ "type": "monalisa", "x": 0.5, "z": 0.05, "y": 180 }],
+      "fx": ["confetti"],
+      "sfx": ["success", "chime"],
+      "beats": [{ "at": "immortal", "actor": "vincenzo", "expression": "grin", "fx": "sparkle" }],
+      "transition": "dissolve"
+    }
+  ]
+}

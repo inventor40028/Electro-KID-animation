@@ -1,0 +1,34 @@
+{
+  "title": "window diag",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "rate": "+6%",
+  "music": "none",
+  "cast": {
+    "goony": {
+      "color": "#a8552f",
+      "outfit": "hoodie",
+      "hair": "messy",
+      "hairColor": "#3a2a1e",
+      "skin": "#e8b98a"
+    }
+  },
+  "shots": [
+    {
+      "say": "Window check one two three.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "medium",
+      "camera": "static",
+      "actors": [],
+      "focus": "prop:0",
+      "props": [
+        {
+          "type": "plant",
+          "x": 0.5,
+          "z": 0.05,
+          "scale": 0.3
+        }
+      ]
+    }
+  ]
+}
