@@ -28,7 +28,7 @@ npm run studio                                     # Remotion studio
 - Durations derive from narration word timing.
 
 ## Character
-- 2D SVG stickmen with builds, outfits, hair, hats, 20+ expressions, poses, blinks, walk cycles, real 3D shadows.
+- 2D SVG stickmen with builds, outfits, hair, hats, **27 expressions** (see `src/character/EXPRESSIONS.md`), poses, blinks, walk cycles, real 3D shadows.
 
 ## Locations (3D)
 - JSON-defined rooms/worlds: shapes (`box/cyl/cone/ball/rock/roof/wall/profile/tube/leaf/sign/use`), terrain, scatter, sun/ambient/fog, camera.
@@ -39,7 +39,15 @@ npm run studio                                     # Remotion studio
 - **FX** include `groinspray` (white water bursts) for gags.
 - Make/QA pipeline validates stories, renders, and loud-norms to −14 LUFS.
 
-## Films
-- `stories/goony-nov11.json` — "Goony — November 11" (whistle → shock → invoice → fly-out → CTA).
+## Design conventions (important)
+- **Static = JSON.** Anything that never moves (rooms, props, backdrop) lives in `locations/*.json`.
+- **Scripted movement = Three.js.** Anything a script tells to move is animated in code (`Location3D`/`Scene3D`) — JSON parts are only the static layout. Only objects explicitly told to move in a script move.
+- **Physics only on request.** No physics by default; add it deliberately when a shot needs it.
+- **Voice.** Default narration is the story-level Edge TTS voice (`story.voice`). A character can override with its own `voice` field; if a shot quotes a character, that voice is used. Voice Studio can be swapped in per-character when the script asks.
+- **SFX.** Sounds live in `public/sfx/` (~50 cues) and are swappable; drop in a file to replace a cue.
+- The film's audio tracks are NOT committed (regenerable); drop your own into `public/music/` and set `story.music`.
 
-> Story/story details and per-short lessons are kept in the project notes, not this README.
+## Films
+- `stories/goony-nov11.json` — "Goony — November 11" (whistle → shock → laptop at 4s → invoice fly-out → endcard + CTA).
+
+> Story details and per-short lessons are kept in the project notes, not this README. See `POST.md` for the showcase write-up.

@@ -61,6 +61,8 @@ export const POSES = [
   "type", // hands forward low (keyboard)
   "phone", // hand at ear
   "fidget", // low hand swinging back-and-forth fast (Goony)
+  "drink", // one hand to the mouth, holding a cup
+  "dance", // both arms pumping, body sway
 ] as const;
 
 export const EXPRESSIONS = [
@@ -85,6 +87,12 @@ export const EXPRESSIONS = [
   "bored",
   "dead", // x eyes
   "love",
+  "smile_closed", // closed happy eyes + small smile (used randomly, like laugh)
+  "relief", // relaxed lidded eyes + soft smile
+  "relief_open", // wider eyes + relieved open mouth
+  "lick", // tongue out
+  "nervous", // sweat drop + wide eyes
+  "dazed", // dizzy spiral-y eyes + small o mouth
 ] as const;
 
 export const HAIR = ["none", "short", "parted", "spiky", "curly", "bob", "long", "ponytail", "bun", "mohawk", "messy", "old"] as const;

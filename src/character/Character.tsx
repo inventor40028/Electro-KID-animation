@@ -97,13 +97,16 @@ export const Character: React.FC<CharacterProps> = (p) => {
   const typeJig = p.pose === "type" ? Math.sin(t * 30) * 3 : 0;
   const fidget = p.pose === "fidget" ? Math.sin(t * 22 + seed) * 20 : 0;
   const fidgetY = p.pose === "fidget" ? Math.cos(t * 22 + seed) * 6 : 0;
+  const dance = p.pose === "dance" ? 1 : 0;
+  const danceSwing = Math.sin(t * 9 + seed) * 30 * dance;
+  const danceY = Math.cos(t * 7 + seed) * 12 * dance;
 
   const fromL = resolveArm(from.l, -1, 0), toL = resolveArm(target.l, -1, swingL);
   const fromR = resolveArm(from.r, 1, 0), toR = resolveArm(target.r, 1, swingR);
-  const lh: Vec = [fromL[0] + (toL[0] - fromL[0]) * pt, fromL[1] + (toL[1] - fromL[1]) * pt + typeJig];
+  const lh: Vec = [fromL[0] + (toL[0] - fromL[0]) * pt + danceSwing, fromL[1] + (toL[1] - fromL[1]) * pt + typeJig + danceY];
   const rh: Vec = [
-    fromR[0] + (toR[0] - fromR[0]) * pt + wave + hammerSwing * 70 + fidget,
-    fromR[1] + (toR[1] - fromR[1]) * pt + gest - typeJig + hammerSwing * 120 + fidgetY,
+    fromR[0] + (toR[0] - fromR[0]) * pt + wave + hammerSwing * 70 + fidget + danceSwing,
+    fromR[1] + (toR[1] - fromR[1]) * pt + gest - typeJig + hammerSwing * 120 + fidgetY - danceY,
   ];
   const ls: Vec = [-sx, shoulderY], rs: Vec = [sx, shoulderY];
 
@@ -120,8 +123,10 @@ export const Character: React.FC<CharacterProps> = (p) => {
   const legBendR = pd.rl.bend + (walking ? 6 : 0) + (drop > 30 ? 30 : 0);
 
   // ---------------- face timing ----------------
-  const blinkPeriod = 96 + Math.floor(seed * 50);
-  const blink = (frame + Math.floor(seed * 200)) % blinkPeriod < 4;
+  // old-folder blink: eyelid sweep (0.5 -> 1 -> 0) over a short period
+  const blinkPeriod = 38 + (seed * 17) % 31;
+  const blinkPh = (frame + seed * 13) % blinkPeriod;
+  const blink = blinkPh < 2 ? 0.5 : blinkPh < 4 ? 1 : 0;
   const talk = p.talking
     ? clamp(0.55 + 0.45 * Math.sin(t * 2 * Math.PI * 6.5 + seed * 5) * Math.sin(t * 2 * Math.PI * 1.7 + 1) + 0.25 * Math.sin(t * 31))
     : 0;

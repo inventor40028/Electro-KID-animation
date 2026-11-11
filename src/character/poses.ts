@@ -55,6 +55,8 @@ export const POSE_DEFS: Record<Pose, PoseDef> = {
   type: { l: { out: -10, dy: 46, bend: 30 }, r: { out: -10, dy: 46, bend: 30 }, ...legs, tilt: 4, drop: 0, headTilt: 6 },
   phone: { l: hang, r: { out: 0, dy: 0, bend: -40, at: "ear" }, ...legs, tilt: 0, drop: 0, headTilt: -6 },
   fidget: { l: hang, r: { out: 30, dy: 96, bend: 26 }, ...legs, tilt: 4, drop: 0, headTilt: -2 },
+  drink: { l: hang, r: { out: 0, dy: 6, bend: -34, at: "face" }, ...legs, tilt: 2, drop: 0, headTilt: -6 },
+  dance: { l: { out: 44, dy: -80, bend: 18 }, r: { out: 44, dy: -80, bend: 18 }, ...legs, tilt: 0, drop: 0, headTilt: -4 },
 };
 
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;

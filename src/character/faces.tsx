@@ -8,7 +8,7 @@ export type Expression = (typeof EXPRESSIONS)[number];
 // `look` shifts features horizontally (-1 left .. 1 right).
 type FaceProps = {
   expression: Expression;
-  blink: boolean;
+  blink: number; // eyelid fraction 0..1 during a blink (old-folder style)
   talk: number; // 0 closed .. 1 open
   look: number;
   t: number; // seconds (for small wobbles)
@@ -142,7 +142,12 @@ export const Face: React.FC<FaceProps> = ({ expression, blink, talk, look, t }) 
       mouth = talkMouth() ?? <Line d={`M ${ox - 10} ${my + 2} Q ${ox + 4} ${my + 8} ${ox + 14} ${my - 4}`} />;
       break;
     case "happy":
-      eyes = dots;
+      eyes = (
+        <>
+          <ClosedArc x={L} y={ey} />
+          <ClosedArc x={Rr} y={ey} />
+        </>
+      );
       brows = (
         <>
           <Brow x={L} y={-28} angle={-10} />
@@ -204,7 +209,7 @@ export const Face: React.FC<FaceProps> = ({ expression, blink, talk, look, t }) 
           <Brow x={Rr} y={-36} angle={18} len={20} />
         </>
       );
-      mouth = <Teeth x={ox + wob * 0.5} y={my + 4} w={34} h={18} />;
+      mouth = talkMouth(14) ?? <OpenMouth x={ox} y={my + 4} w={14} h={16} tongue={false} shape="o" />;
       break;
     case "whistle":
       eyes = (
@@ -220,6 +225,98 @@ export const Face: React.FC<FaceProps> = ({ expression, blink, talk, look, t }) 
         </>
       );
       mouth = talkMouth(12) ?? <OpenMouth x={ox} y={my + 4} w={12} h={9} tongue={false} shape="o" />;
+      break;
+    case "smile_closed":
+      eyes = (
+        <>
+          <ClosedArc x={L} y={ey} />
+          <ClosedArc x={Rr} y={ey} />
+        </>
+      );
+      brows = (
+        <>
+          <Brow x={L} y={-28} angle={-8} />
+          <Brow x={Rr} y={-28} angle={8} />
+        </>
+      );
+      mouth = talkMouth(18) ?? <Line d={`M ${ox - 10} ${my + 2} Q ${ox} ${my + 8} ${ox + 10} ${my + 2}`} />;
+      break;
+    case "relief":
+      eyes = (
+        <>
+          <LidEye x={L} y={ey} lid={0.3} />
+          <LidEye x={Rr} y={ey} lid={0.3} />
+        </>
+      );
+      brows = (
+        <>
+          <Brow x={L} y={-26} angle={0} />
+          <Brow x={Rr} y={-26} angle={0} />
+        </>
+      );
+      mouth = talkMouth(16) ?? <Line d={`M ${ox - 10} ${my + 2} Q ${ox} ${my + 6} ${ox + 10} ${my + 2}`} />;
+      break;
+    case "relief_open":
+      eyes = (
+        <>
+          <RoundEye x={L} y={ey - 2} r={13} p={4} />
+          <RoundEye x={Rr} y={ey - 2} r={13} p={4} />
+        </>
+      );
+      brows = (
+        <>
+          <Brow x={L} y={-32} angle={-10} len={20} />
+          <Brow x={Rr} y={-32} angle={10} len={20} />
+        </>
+      );
+      mouth = talkMouth(16) ?? <OpenMouth x={ox} y={my + 4} w={16} h={12} tongue={false} shape="o" />;
+      break;
+    case "lick":
+      eyes = dots;
+      brows = (
+        <>
+          <Brow x={L} y={-27} angle={-6} />
+          <Brow x={Rr} y={-27} angle={6} />
+        </>
+      );
+      mouth = <OpenMouth x={ox} y={my + 4} w={18} h={14} tongue />;
+      break;
+    case "nervous":
+      eyes = (
+        <>
+          <RoundEye x={L} y={ey} r={12} p={3} />
+          <RoundEye x={Rr} y={ey} r={12} p={3} />
+        </>
+      );
+      brows = (
+        <>
+          <Brow x={L} y={-30} angle={-14} len={20} />
+          <Brow x={Rr} y={-30} angle={14} len={20} />
+        </>
+      );
+      mouth = talkMouth(16) ?? <Line d={`M ${ox - 12} ${my + 4} q 4 -5 8 0 q 4 5 8 0 q 4 -5 8 0`} />;
+      extra = <Sweat />;
+      break;
+    case "dazed":
+      eyes = (
+        <>
+          <RoundEye x={L} y={ey} r={11} p={3} />
+          <RoundEye x={Rr} y={ey} r={11} p={3} />
+        </>
+      );
+      brows = (
+        <>
+          <Brow x={L} y={-30} angle={-6} len={16} />
+          <Brow x={Rr} y={-30} angle={6} len={16} />
+        </>
+      );
+      mouth = talkMouth(12) ?? <OpenMouth x={ox} y={my + 4} w={12} h={12} tongue={false} shape="o" />;
+      extra = (
+        <g stroke={INK} strokeWidth={2.5} fill="none" strokeLinecap="round">
+          <path d={`M ${L - 8} ${ey - 12} q 3 -4 7 0 q 4 4 8 0`} />
+          <path d={`M ${Rr - 8} ${ey - 12} q 3 -4 7 0 q 4 4 8 0`} />
+        </g>
+      );
       break;
     case "angry":
       eyes = dots;
@@ -417,7 +514,12 @@ export const Face: React.FC<FaceProps> = ({ expression, blink, talk, look, t }) 
   const canBlink = ["neutral", "smug", "whistle", "happy", "grin", "angry", "sad", "worried", "determined", "bored", "furious", "wink", "suspicious"].includes(expression);
   return (
     <g>
-      {blink && canBlink ? blinkEyes : eyes}
+      {blink > 0 && canBlink ? (
+        <>
+          <LidEye x={L} y={ey} lid={blink} />
+          <LidEye x={Rr} y={ey} lid={blink} />
+        </>
+      ) : eyes}
       {brows}
       {mouth}
       {extra}

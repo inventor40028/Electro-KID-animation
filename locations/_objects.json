@@ -6510,5 +6510,33 @@
         "glow": true
       }
     ]
+  },
+  "glass_water": {
+    "main": "#bfe8ff",
+    "parts": [
+      {
+        "cyl": [
+          0.06,
+          0.09,
+          0.22
+        ],
+        "color": "#d6f0ff",
+        "opacity": 0.35
+      },
+      {
+        "cyl": [
+          0.05,
+          0.08,
+          0.16
+        ],
+        "at": [
+          0,
+          0.03,
+          0
+        ],
+        "color": "#7fd0ff",
+        "opacity": 0.75
+      }
+    ]
   }
 }

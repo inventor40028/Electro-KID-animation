@@ -9,6 +9,7 @@ const color = z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "hex color 
 
 export const CharacterSchema = z.object({
   name: z.string().optional(),
+  voice: z.string().optional().describe("Edge TTS voice override for this character (defaults to story.voice)"),
   color: color.describe("main outfit color"),
   outfit: z.enum(OUTFITS).default("shirt"),
   hair: z.enum(HAIR).default("short"),

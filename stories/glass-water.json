@@ -1,0 +1,101 @@
+{
+  "title": "Glass of Water",
+  "music": "none",
+  "cast": {
+    "guy": {
+      "color": "#3d5a80",
+      "outfit": "shirt",
+      "hair": "short",
+      "hairColor": "#4a3426",
+      "skin": "#e8b98a",
+      "build": "normal"
+    }
+  },
+  "shots": [
+    {
+      "say": "He picked up the glass.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "medium",
+      "camera": "pushIn",
+      "focus": "guy",
+      "actors": [
+        {
+          "id": "guy",
+          "x": 0.5,
+          "z": 0.5,
+          "pose": "talk",
+          "expression": "neutral",
+          "facing": "front"
+        }
+      ]
+    },
+    {
+      "say": "And he took a sip.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "close",
+      "camera": "pushIn",
+      "focus": "guy",
+      "transition": "cut",
+      "actors": [
+        {
+          "id": "guy",
+          "x": 0.5,
+          "z": 0.5,
+          "pose": "drink",
+          "expression": "happy",
+          "facing": "front",
+          "holding": "mug"
+        }
+      ],
+      "sfx": [
+        "splash"
+      ]
+    },
+    {
+      "say": "Then he danced.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "medium",
+      "camera": "orbit",
+      "focus": "guy",
+      "transition": "dissolve",
+      "actors": [
+        {
+          "id": "guy",
+          "x": 0.5,
+          "z": 0.5,
+          "pose": "dance",
+          "expression": "happy",
+          "facing": "front"
+        }
+      ],
+      "fx": [
+        "sparkle"
+      ]
+    },
+    {
+      "say": "Then he danced.",
+      "location": "goony_bedroom",
+      "time": "night",
+      "framing": "medium",
+      "camera": "orbit",
+      "focus": "guy",
+      "transition": "dissolve",
+      "actors": [
+        {
+          "id": "guy",
+          "x": 0.5,
+          "z": 0.5,
+          "pose": "dance",
+          "expression": "happy",
+          "facing": "front"
+        }
+      ],
+      "fx": [
+        "sparkle"
+      ]
+    }
+  ]
+}
